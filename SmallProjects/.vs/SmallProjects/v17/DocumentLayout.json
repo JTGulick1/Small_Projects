@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JT\\source\\repos\\SmallProjects\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81570D3F-12D6-4F35-89DC-3DF20C372808}|SmallProjects\\SmallProjects.vcxproj|C:\\Users\\JT\\source\\repos\\SmallProjects\\SmallProjects\\Calculator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{81570D3F-12D6-4F35-89DC-3DF20C372808}|SmallProjects\\SmallProjects.vcxproj|solutionrelative:SmallProjects\\Calculator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Calculator.cpp",
+              "DocumentMoniker": "C:\\Users\\JT\\source\\repos\\SmallProjects\\SmallProjects\\Calculator.cpp",
+              "RelativeDocumentMoniker": "SmallProjects\\Calculator.cpp",
+              "ToolTip": "C:\\Users\\JT\\source\\repos\\SmallProjects\\SmallProjects\\Calculator.cpp",
+              "RelativeToolTip": "SmallProjects\\Calculator.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-27T18:19:21.487Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
