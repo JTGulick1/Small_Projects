@@ -1,17 +1,209 @@
 #include <iostream>
-#include <stack>
+#include <queue>
 #include <string>
 
 using namespace std;
 
+string Equation(string equ) {
+	string updated = "";
+	string curr = "";
+	string::size_type n;
+	queue<float> numbers;
+	queue<char> forms;
+	bool ex = false;
+	bool md = false;
+	bool ad = false;
+
+	n = equ.find('(');
+	if (string::npos != n) {
+		string::size_type temp;
+		temp = equ.find(')');
+		string newEqu = equ.substr(n + 1, temp - 1); // this might or might not work
+		equ = Equation(newEqu);
+	}
+
+	n = equ.find('^');
+	if (string::npos != n) {
+		ex = true;
+	}
+	if (n != equ.find('*') || n != equ.find('/')) {
+		md = true;
+	}
+	else if (n != equ.find('+') || n != equ.find('-')) {
+		ad = true;
+	}
+
+	if (ex == false && md == false && ad == false) {
+		return equ;
+	}
+
+	for (char i : equ) { //math
+		if (isdigit(i) >= 1 || i == '.') {
+			curr += i;
+		}
+
+		//WIP EXPONENTS
+
+		else if (i == '*' && forms.size() == 0 && md == true) {
+			forms.push('*');
+			numbers.push(stof(curr));
+			curr = "";
+		}
+		else if (i == '/' && forms.size() == 0 && md == true)
+		{
+			forms.push('/');
+			numbers.push(stof(curr));
+			curr = "";
+		}
+		else if (forms.size() == 1 && md == true) {
+			if (i == '*') {
+				float temp = numbers.front();
+				numbers.pop();
+				if (forms.front() == '/') {
+					numbers.push(temp / stof(curr));
+					forms.pop();
+					forms.push('*');
+				}
+				else {
+					numbers.push(temp * stof(curr));
+				}
+				curr = "";
+			}
+			else if (i == '/') {
+				float temp = numbers.front();
+				numbers.pop();
+				if (forms.front() == '*') {
+					numbers.push(temp * stof(curr));
+					forms.pop();
+					forms.push('/');
+				}
+				else {
+					numbers.push(temp / stof(curr));
+				}
+				curr = "";
+			}
+			else {
+				float temp = numbers.front();
+				numbers.pop();
+				if (forms.front() == '/') {
+					updated += to_string(temp / stof(curr));
+				}
+				else {
+					updated += to_string(temp * stof(curr));
+				}
+				forms.pop();
+				updated += i;
+				curr = "";
+			}
+
+		}
+		else if (md == true) {
+			if (forms.size() == 1) {
+				if (forms.front() == '*' && md == true) {
+					updated += to_string(numbers.front() * stof(curr));
+				}
+				else if (forms.front() == '/' && md == true) {
+					updated += to_string(numbers.front() / stof(curr));
+				}
+				updated += i;
+				numbers.pop();
+				forms.pop();
+			}
+			else {
+				updated += curr;
+				updated += i;
+			}
+			curr = "";
+		}
+
+
+
+		else if (i == '+' && forms.size() == 0 && ad == true) {
+			forms.push('+');
+			numbers.push(stof(curr));
+			curr = "";
+		}
+		else if (i == '-' && forms.size() == 0 && ad == true)
+		{
+			forms.push('-');
+			numbers.push(stof(curr));
+			curr = "";
+		}
+		else if (forms.size() == 1 && ad == true) {
+			if (i == '+') {
+				float temp = numbers.front();
+				numbers.pop();
+				if (forms.front() == '-') {
+					numbers.push(temp - stof(curr));
+					forms.pop();
+					forms.push('+');
+				}
+				else {
+					numbers.push(temp + stof(curr));
+				}
+				curr = "";
+			}
+			else if (i == '-') {
+				float temp = numbers.front();
+				numbers.pop();
+				if (forms.front() == '+') {
+					numbers.push(temp + stof(curr));
+					forms.pop();
+					forms.push('-');
+				}
+				else {
+					numbers.push(temp - stof(curr));
+				}
+				curr = "";
+			}
+		}
+		else if (ad == true) {
+			if (forms.size() == 1) {
+				if (forms.front() == '+' && md == true) {
+					updated += to_string(numbers.front() + stof(curr));
+				}
+				else if (forms.front() == '-' && md == true) {
+					updated += to_string(numbers.front() - stof(curr));
+				}
+				updated += i;
+				numbers.pop();
+				forms.pop();
+			}
+			else {
+				updated += curr;
+				updated += i;
+			}
+			curr = "";
+		}
+	}
+	if (forms.size() == 1) {
+		//cout << numbers.front() << forms.front() << "   " << curr << "    ";
+		if (forms.front() == '*' && md == true) {
+			updated += to_string(numbers.front() * stof(curr));
+		}
+		else if (forms.front() == '/' && md == true) {
+			updated += to_string(numbers.front() / stof(curr));
+		}
+		else if (forms.front() == '+' && ad == true) {
+			updated += to_string(numbers.front() + stof(curr));
+		}
+		else if (forms.front() == '-' && ad == true) {
+			updated += to_string(numbers.front() - stof(curr));
+		}
+	}
+	else {
+		updated += curr;
+	}
+
+	return updated;
+};
+
 void Calculator() {
-	stack<float> stk;
-	stack<char> equ;
 	string equation = "";
 	bool iCheck = false;
 	while (true) {
 		std::cout << "\nRules: \nPlease Add No Spaces To Equation\nNo Alpha\nPlease Input Your Equation: ";
-		cin >> equation;
+		std::cin >> equation;
 		//check if the equation is valid
 		for (char i : equation) {
 			if (isalpha(i) >= 1)
@@ -27,137 +219,18 @@ void Calculator() {
 			iCheck = false;
 		}
 	}
-	
+
 	//Since the equation is valid we do pemdas
-
-	while (true) {
-		string num = "";
-		int pre = 0; // WIP
-		int exp = 0; // WIP
-		int md = 0; // mult or div
-		int as = 0; // add or subtr
-		for (char i : equation) { 
-			if (isdigit(i) >= 1) {
-				num += i;
-			}
-			else if(i == '*' || i == '/')
-			{
-				if (md >= 1) {
-					char temp = equ.top();
-					int first = stk.top();
-					stk.pop();
-					equ.pop();
-					if (temp == '*') {
-						num = to_string(first * stof(num));
-						md--;
-					}
-					else if (temp == '/') {
-						num = to_string(first / stof(num));
-						md--;
-					}
-					
-				}
-				md++;
-				stk.push(stof(num));
-				equ.push(i);
-				num = "";
-			}
-			else if (i == '+' || i == '-') {
-				if (md >= 1) {
-					char temp = equ.top();
-					float first = stk.top();
-					stk.pop();
-					equ.pop();
-					if (temp == '*') {
-						num = to_string(first * stof(num));
-						md--;
-					}
-					else if (temp == '/') {
-						num = to_string(first / stof(num));
-						md--;
-					}
-					
-				}
-				else if (as >= 1) {
-					char temp = equ.top();
-					float first = stk.top();
-					stk.pop();
-					equ.pop();
-					if (temp == '+') {
-						num = to_string(first + stof(num));
-						as--;
-					}
-					else if (temp == '-') {
-						num = to_string(first - stof(num));
-						as--;
-					}
-				}
-
-				as++;
-				equ.push(i);
-				stk.push(stof(num));
-				num = "";
-			}
-		}
-		if (pre == true) {
-			std::cout << "Invalid Equation" << endl;
-			break;
-		}
-
-
-		if (md >= 1) {
-			char temp = equ.top();
-			float first = stk.top();
-			stk.pop();
-			equ.pop();
-			if (temp == '*') {
-				num = to_string(first * stof(num));
-			}
-			else if (temp == '/') {
-				num = to_string(first / stof(num));
-			}
-			md = false;
-			stk.push(stof(num));
-		}
-
-
-		if (as >= 1) {
-			char temp = equ.top();
-			float first = stk.top();
-			stk.pop();
-			num = to_string(stk.top());
-			stk.pop();
-			equ.pop();
-			if (temp == '+') {
-				num = to_string(first + stof(num));
-			}
-			else if (temp == '-') {
-				num = to_string(first - stof(num));
-			}
-			md = false;
-			stk.push(stof(num));
-		}
-
-		if (equ.empty() == true) {
-			break;
-		}
-		else { //rewrite equation and run it agian
-			equation.clear();
-			while (stk.empty() == false || equ.empty() == false) {
-				std::cout << equation << "    ";
-				equation += to_string(stk.top());
-				if (equ.empty() != false) {
-					equation += equ.top();
-					equ.pop();
-				}
-				stk.pop();
-			}
-		}
+	int i = 0;
+	while (i < 10) {
+		equation = Equation(equation);
+		cout << equation << endl;
+		i++;
 	}
 
-	std::cout << "\n\nYour Answer Is: " << stk.top() << endl;
+	std::cout << "\n\nYour Answer Is: " << equation << "\n" << endl;
 	std::cout << "Another Equation? (y/n)  ";
-	cin >> equation;
+	std::cin >> equation;
 	if (equation == "y") {
 		Calculator();
 		return;
