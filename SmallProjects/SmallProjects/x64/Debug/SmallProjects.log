@@ -1,0 +1,8 @@
+﻿  Calculator.cpp
+C:\Users\JT\Small_Projects\SmallProjects\SmallProjects\Calculator.cpp(47,16): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\JT\Small_Projects\SmallProjects\SmallProjects\Calculator.cpp(47,16): warning C4244:         with
+C:\Users\JT\Small_Projects\SmallProjects\SmallProjects\Calculator.cpp(47,16): warning C4244:         [
+C:\Users\JT\Small_Projects\SmallProjects\SmallProjects\Calculator.cpp(47,16): warning C4244:             _Ty=float
+C:\Users\JT\Small_Projects\SmallProjects\SmallProjects\Calculator.cpp(47,16): warning C4244:         ]
+C:\Users\JT\Small_Projects\SmallProjects\SmallProjects\Calculator.cpp(102,14): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+  SmallProjects.vcxproj -> C:\Users\JT\Small_Projects\SmallProjects\x64\Debug\SmallProjects.exe
