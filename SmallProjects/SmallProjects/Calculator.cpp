@@ -19,7 +19,23 @@ string Equation(string equ) {
 		string::size_type temp;
 		temp = equ.find(')');
 		string newEqu = equ.substr(n + 1, temp - 1); // this might or might not work
-		equ = Equation(newEqu);
+		newEqu.erase(newEqu.begin() + newEqu.size() - 1, newEqu.end() - 1);
+		string beg = equ.substr(0, n);
+		string end = equ.substr(temp + 1, equ.size());
+		cout << newEqu << endl;
+		if (beg.size() >= 1 && end.size() >= 1) {
+			equ = beg + '*' + Equation(newEqu) + '*' + end;
+		}
+		else if (beg.size() >= 1 && end.size() <= 1) {
+			equ = beg + '*' + Equation(newEqu);
+		}
+		else if (beg.size() <= 1 && end.size() >= 1) {
+			equ = Equation(newEqu) + '*' + end;
+		}
+		else {
+			equ = Equation(newEqu);
+		}
+		cout << equ << endl;
 	}
 
 	n = equ.find('^');
