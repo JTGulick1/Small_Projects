@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\jtgul\\Small_Projects\\SmallProjects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{81570D3F-12D6-4F35-89DC-3DF20C372808}|SmallProjects\\SmallProjects.vcxproj|C:\\Users\\jtgul\\Small_Projects\\SmallProjects\\SmallProjects\\To-Do_List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{81570D3F-12D6-4F35-89DC-3DF20C372808}|SmallProjects\\SmallProjects.vcxproj|solutionrelative:SmallProjects\\To-Do_List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81570D3F-12D6-4F35-89DC-3DF20C372808}|SmallProjects\\SmallProjects.vcxproj|C:\\Users\\jtgul\\Small_Projects\\SmallProjects\\SmallProjects\\Calculator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{81570D3F-12D6-4F35-89DC-3DF20C372808}|SmallProjects\\SmallProjects.vcxproj|solutionrelative:SmallProjects\\Calculator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "To-Do_List.cpp",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\SmallProjects\\SmallProjects\\To-Do_List.cpp",
+              "RelativeDocumentMoniker": "SmallProjects\\To-Do_List.cpp",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\SmallProjects\\SmallProjects\\To-Do_List.cpp",
+              "RelativeToolTip": "SmallProjects\\To-Do_List.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T21:21:17.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Calculator.cpp",
               "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\SmallProjects\\SmallProjects\\Calculator.cpp",
               "RelativeDocumentMoniker": "SmallProjects\\Calculator.cpp",

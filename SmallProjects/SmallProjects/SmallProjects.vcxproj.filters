@@ -16,10 +16,16 @@
     <Filter Include="Source Files\Calculator">
       <UniqueIdentifier>{3d17c57a-c809-4c34-a326-ab009cb57199}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\To-Do_List">
+      <UniqueIdentifier>{19aef382-45b3-4d39-9d8a-4b377c30e7d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Calculator.cpp">
       <Filter>Source Files\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="To-Do_List.cpp">
+      <Filter>Source Files\To-Do_List</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

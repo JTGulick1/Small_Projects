@@ -3,7 +3,7 @@ While I am searching for a job, I am creating small projects to increase my prog
 Project Ideas:
 
 Calculator:
-Create a console-based or GUI calculator that supports basic arithmetic operations and extends to advanced functions like trigonometry or logarithms.
+Create a console-based calculator that supports basic arithmetic operations and extends to advanced functions like trigonometry or logarithms.
 
 To-Do List Manager:
 Design a simple text-based to-do list manager where users can add, edit, delete, and save tasks.
