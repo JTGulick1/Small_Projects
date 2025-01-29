@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <string>
+#include <math.h>
 
 using namespace std;
 
@@ -249,7 +250,7 @@ void Calculator() {
 		std::cin >> equation;
 		//check if the equation is valid
 		for (char i : equation) {
-			if (isalpha(i) >= 1)
+			if (isalpha(i) >= 1 && i != 'l' || i != 't' && i != 'c' && i != 's')
 			{
 				std::cout << "Equation is Invalid" << endl;
 				iCheck = true;
@@ -262,7 +263,7 @@ void Calculator() {
 			iCheck = false;
 		}
 	}
-
+	
 	//Since the equation is valid we do pemdas
 	int i = 0;
 	while (i < 10) {
