@@ -242,18 +242,47 @@ string Equation(string equ) {
 	return updated;
 };
 
+
+string Function(string equ) {
+	string updated = "";
+	string curr = "";
+
+	for (int i = 1; i < equ.size(); i++) {
+		curr += equ[i];
+	}
+
+	if (equ[0] == 'l') {
+		updated += to_string(logf(stof(curr)));
+	}
+	else if (equ[0] == 't') {
+		updated += to_string(tanf(stof(curr)));
+	}
+	else if (equ[0] == 'c') {
+		updated += to_string(cosf(stof(curr)));
+	}
+	else if (equ[0] == 's') {
+		updated += to_string(sinf(stof(curr)));
+	}
+
+	return updated;
+}
+
 void Calculator() {
 	string equation = "";
 	bool iCheck = false;
+	bool func = true;
 	while (true) {
-		std::cout << "\nRules: \nPlease Add No Spaces To Equation\nNo Alpha\nPlease Input Your Equation: ";
+		std::cout << "\nRules: \nPlease Add No Spaces To Equation\nNo Alpha\nIf you want functions:l for log, t for tan, c for csin, s for sin\nPlease Input Your Equation: ";
 		std::cin >> equation;
 		//check if the equation is valid
 		for (char i : equation) {
-			if (isalpha(i) >= 1 && i != 'l' || i != 't' && i != 'c' && i != 's')
+			if (isalpha(i) >= 1 && i != 'l' && i != 't' && i != 'c' && i != 's')
 			{
 				std::cout << "Equation is Invalid" << endl;
 				iCheck = true;
+			}
+			else if (i == 'l' || i == 't' || i == 'c' || i == 's') {
+				func = true;
 			}
 		}
 		if (iCheck == false) {
@@ -263,13 +292,17 @@ void Calculator() {
 			iCheck = false;
 		}
 	}
-	
+	if (func == true) {
+		equation = Function(equation);
+	}
 	//Since the equation is valid we do pemdas
-	int i = 0;
-	while (i < 10) {
-		equation = Equation(equation);
-		cout << equation << endl;
-		i++;
+	else {
+		int i = 0;
+		while (i < 10) {
+			equation = Equation(equation);
+			cout << equation << endl;
+			i++;
+		}
 	}
 
 	std::cout << "\n\nYour Answer Is: " << equation << "\n" << endl;
