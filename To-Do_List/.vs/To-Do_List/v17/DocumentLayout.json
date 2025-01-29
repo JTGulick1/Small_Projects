@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98971403-2B1A-4930-9125-23C887C16AA5}|To-Do_List\\To-Do_List.vcxproj|C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\To-Do-Lists.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{98971403-2B1A-4930-9125-23C887C16AA5}|To-Do_List\\To-Do_List.vcxproj|solutionrelative:To-Do_List\\To-Do-Lists.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "To-Do-Lists.cpp",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\To-Do-Lists.cpp",
+              "RelativeDocumentMoniker": "To-Do_List\\To-Do-Lists.cpp",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\To-Do-Lists.cpp",
+              "RelativeToolTip": "To-Do_List\\To-Do-Lists.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-29T22:49:21.87Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
