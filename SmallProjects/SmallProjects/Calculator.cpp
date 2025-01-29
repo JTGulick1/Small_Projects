@@ -16,6 +16,7 @@ string Equation(string equ) {
 
 	n = equ.find('(');
 	if (string::npos != n) {
+
 		string::size_type temp;
 		temp = equ.find(')');
 		string newEqu = equ.substr(n + 1, temp - 1); // this might or might not work
@@ -23,6 +24,8 @@ string Equation(string equ) {
 		string beg = equ.substr(0, n);
 		string end = equ.substr(temp + 1, equ.size());
 		cout << newEqu << endl;
+		newEqu = Equation(newEqu);
+
 		if (beg.size() >= 1 && end.size() >= 1) {
 			equ = beg + '*' + Equation(newEqu) + '*' + end;
 		}
@@ -53,12 +56,33 @@ string Equation(string equ) {
 		return equ;
 	}
 
-	for (char i : equ) { //math
-		if (isdigit(i) >= 1 || i == '.') {
+	for (char i : equ) { 
+		if (i == '(' || i == ')') {
+
+		}
+		else if (isdigit(i) >= 1 || i == '.') {
 			curr += i;
 		}
 
-		//WIP EXPONENTS
+		else if (i == '^' && forms.size() == 0 && ex == true) {
+
+			forms.push('^');
+			numbers.push(stof(curr));
+			curr = "";
+		}
+		else if (forms.size() == 1 && ex == true) {
+			cout << numbers.front() << "   " << curr << endl;
+			float temp = powf(numbers.front(), stof(curr));
+			updated += to_string(temp) + i;
+			curr = "";
+			numbers.pop();
+			forms.pop();
+		}
+		else if (ex == true) {
+			updated += curr;
+			updated += i;
+			curr = "";
+		}
 
 		else if (i == '*' && forms.size() == 0 && md == true) {
 			forms.push('*');
@@ -194,7 +218,10 @@ string Equation(string equ) {
 	}
 	if (forms.size() == 1) {
 		//cout << numbers.front() << forms.front() << "   " << curr << "    ";
-		if (forms.front() == '*' && md == true) {
+		if (forms.front() == '^' && ex == true) {
+			updated += to_string(powf(numbers.front(), stof(curr)));
+		}
+		else if (forms.front() == '*' && md == true) {
 			updated += to_string(numbers.front() * stof(curr));
 		}
 		else if (forms.front() == '/' && md == true) {
