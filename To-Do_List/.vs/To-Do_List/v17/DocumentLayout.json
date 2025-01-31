@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{98971403-2B1A-4930-9125-23C887C16AA5}|To-Do_List\\To-Do_List.vcxproj|C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\To-Do-Lists.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{98971403-2B1A-4930-9125-23C887C16AA5}|To-Do_List\\To-Do_List.vcxproj|solutionrelative:To-Do_List\\To-Do-Lists.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98971403-2B1A-4930-9125-23C887C16AA5}|To-Do_List\\To-Do_List.vcxproj|C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\data.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{98971403-2B1A-4930-9125-23C887C16AA5}|To-Do_List\\To-Do_List.vcxproj|solutionrelative:To-Do_List\\data.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "data.txt",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\data.txt",
+              "RelativeDocumentMoniker": "To-Do_List\\data.txt",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\data.txt",
+              "RelativeToolTip": "To-Do_List\\data.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-30T20:12:36.501Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "To-Do_List\\To-Do-Lists.cpp",
               "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\To-Do_List\\To-Do_List\\To-Do-Lists.cpp",
               "RelativeToolTip": "To-Do_List\\To-Do-Lists.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-29T22:49:21.87Z",
               "EditorCaption": ""
