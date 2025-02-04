@@ -1,4 +1,5 @@
 ﻿  Unit_Converter.cpp
-C:\Users\jtgul\Small_Projects\Unit Converter\Unit Converter\Unit_Converter.cpp(45,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\jtgul\Small_Projects\Unit Converter\Unit Converter\Unit_Converter.cpp(56,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Unit Converter.vcxproj -> C:\Users\jtgul\Small_Projects\Unit Converter\x64\Debug\Unit Converter.exe
+C:\Users\JT\Small_Projects\Unit Converter\Unit Converter\Unit_Converter.cpp(59,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\JT\Small_Projects\Unit Converter\Unit Converter\Unit_Converter.cpp(96,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\JT\Small_Projects\Unit Converter\Unit Converter\Unit_Converter.cpp(107,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Unit Converter.vcxproj -> C:\Users\JT\Small_Projects\Unit Converter\x64\Debug\Unit Converter.exe

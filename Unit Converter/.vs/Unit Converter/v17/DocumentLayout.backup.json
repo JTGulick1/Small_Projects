@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JT\\Small_Projects\\Unit Converter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D0F1A1B-441D-46A2-A24C-952E3FF115AA}|Unit Converter\\Unit Converter.vcxproj|C:\\Users\\JT\\Small_Projects\\Unit Converter\\Unit Converter\\Unit_Converter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2D0F1A1B-441D-46A2-A24C-952E3FF115AA}|Unit Converter\\Unit Converter.vcxproj|solutionrelative:Unit Converter\\Unit_Converter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Unit_Converter.cpp",
+              "DocumentMoniker": "C:\\Users\\JT\\Small_Projects\\Unit Converter\\Unit Converter\\Unit_Converter.cpp",
+              "RelativeDocumentMoniker": "Unit Converter\\Unit_Converter.cpp",
+              "ToolTip": "C:\\Users\\JT\\Small_Projects\\Unit Converter\\Unit Converter\\Unit_Converter.cpp*",
+              "RelativeToolTip": "Unit Converter\\Unit_Converter.cpp*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-04T01:33:18.432Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
