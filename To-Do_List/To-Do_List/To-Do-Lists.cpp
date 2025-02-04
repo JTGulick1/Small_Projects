@@ -59,7 +59,30 @@ void ViewCompleted(std::vector<std::string>& lines) {
 }
 
 void SaveList(std::vector<std::string>& lines, std::vector<std::string>& completed){
+	std::ofstream tasks("Tasks.txt");
 
+	// Check if the file is open
+	if (!tasks.is_open()) {
+		std::cerr << "Error opening file!" << std::endl;
+	}
+	else {
+		for (int i = 0; i < lines.size(); i++) {
+			tasks << lines[i] <<"\n";
+		}
+	}
+	tasks.close();
+
+	std::ofstream comps("Completed.txt");
+
+	// Check if the file is open
+	if (!comps.is_open()) {
+		std::cerr << "Error opening file!" << std::endl;
+	}
+	else {
+		for (int i = 0; i < completed.size(); i++) {
+			comps << completed[i] << "\n";
+		}
+	}
 }
 
 void OpenList() {
