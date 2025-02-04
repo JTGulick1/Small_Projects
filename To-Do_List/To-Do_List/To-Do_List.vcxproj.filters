@@ -20,6 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="data.txt" />
+    <Text Include="Tasks.txt" />
+    <Text Include="Completed.txt" />
   </ItemGroup>
 </Project>
