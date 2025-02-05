@@ -10,7 +10,16 @@ void Conversion(float con, int section) { // con == medium of each section
 
 	cout << "\n\n";
 	if (section == 1) {
-
+		cout << "Cm: " << con << endl;
+		cout << "Feet: " << con / 30.48 << endl;
+		cout << "Inches: " << con / 2.54 << endl;
+		cout << "Meters: " << con / 100 << endl;
+		cout << "Yards: " << con / 91.44 << endl;
+		cout << "Miles: " << con / 160900 << endl;
+		cout << "Kilometer: " << con / 100000 << endl;
+		cout << "Millimeter: " << con * 10 << endl;
+		cout << "Micrometer: " << con * 10000 << endl;
+		cout << "Nautical Miles: " << con / 185200 << endl;
 	}
 	else if (section == 2) {
 		cout << "lbs: " << con << endl;
@@ -37,65 +46,65 @@ void Distance() { // con = Cm
 	string help = "";
 	cout << "What unit do you have\n(1) Cm\n(2) Feet\n(3) Inches\n(4) Meters\n(5) Yards\n(6) Miles\n(7) Kilometer\n(8) Millimeter\n(9) Micrometer\n(0) Nautical Miles\n";
 	cin >> help;
-	if (help == "1") { // lbs - con
+	if (help == "1") { // Cm - con
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help));
-		Conversion(lbs, 2);
+		float Cm = (stof(help));
+		Conversion(Cm, 1);
 	}
-	else if (help == "2") { // kgs
+	else if (help == "2") { // Feet
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) * 2.2046244f);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) * 30.48);
+		Conversion(Cm, 1);
 	}
-	else if (help == "3") { // grams
+	else if (help == "3") { // Inches
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) / 453.5920865);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) * 2.54);
+		Conversion(Cm, 1);
 	}
-	else if (help == "4") { // tons
+	else if (help == "4") { // Meters
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) * 2000);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) * 100);
+		Conversion(Cm, 1);
 	}
-	else if (help == "5") { // ounce
+	else if (help == "5") { // Yards
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) / 16);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) * 91.44);
+		Conversion(Cm, 1);
 	}
-	else if (help == "6") { // troy ounce
+	else if (help == "6") { // Miles
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) * 2240);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) * 160900);
+		Conversion(Cm, 1);
 	}
-	else if (help == "7") { // milligram
+	else if (help == "7") { // Km
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) / 453600);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) * 100000);
+		Conversion(Cm, 1);
 	}
-	else if (help == "8") { // ounce
+	else if (help == "8") { // Millimeter
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) / 16);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) / 10);
+		Conversion(Cm, 1);
 	}
-	else if (help == "9") { // troy ounce
+	else if (help == "9") { // Micro Meter
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) * 2240);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) / 10000);
+		Conversion(Cm, 1);
 	}
-	else if (help == "0") { // milligram
+	else if (help == "0") { // Nautical Miles
 		cout << "How Much?\n";
 		cin >> help;
-		float lbs = (stof(help) / 453600);
-		Conversion(lbs, 2);
+		float Cm = (stof(help) * 185200);
+		Conversion(Cm, 1);
 	}
 }
 
