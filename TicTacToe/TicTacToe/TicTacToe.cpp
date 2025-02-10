@@ -152,8 +152,77 @@ void Play2() {
 
 }
 
-void PlayAI() {
+void AiMove(vector<string>& board) {
+	//check if AI and win in 1 move
+	
+	//check if the player can win in 1 move if so then block them
 
+	//if neither player can win take the center
+	if (board[4] == "_") { // middle
+		Play(board, "5", 2);
+		return;
+	}
+	//otherwise take a corner space
+	else if (board[0] == "_") { // top left
+		Play(board, "1", 2);
+		return;
+	}
+	else if (board[2] == "_") { // top right
+		Play(board, "3", 2);
+		return;
+	}
+	else if (board[6] == "_") { // bottom left
+		Play(board, "7", 2);
+		return;
+	}
+	else if (board[8] == "_") {// bottom right
+		Play(board, "9", 2);
+		return;
+	}
+	
+	//if eveything else fails take a random remaining spot
+
+	if (board[1] == "_") { // top mid
+		Play(board, "2", 2);
+		return;
+	}
+	else if (board[3] == "_") { // left mid
+		Play(board, "4", 2);
+		return;
+	}
+	else if (board[5] == "_") { // right mid
+		Play(board, "5", 2);
+		return;
+	}
+	else {// bottom mid
+		Play(board, "8", 2);
+		return;
+	}
+}
+
+void PlayAI() {
+	vector<string> board = { "_","_","_","_","_","_","_","_","_" };
+	string input = "";
+	bool p1 = false;
+	while (true) {
+		system("cls");
+		DrawBoard(board);
+		while (p1 == false) {
+			std::cout << "Choose Square (1-9)" << endl;
+			std::cin >> input;
+			p1 = Play(board, input, 1);
+		}
+		if (checkWins(board) == true) {
+			return;
+		}
+		system("cls");
+		AiMove(board);
+		DrawBoard(board);
+		if (checkWins(board) == true) {
+			return;
+		}
+		p1 = false;
+	}
 }
 
 
