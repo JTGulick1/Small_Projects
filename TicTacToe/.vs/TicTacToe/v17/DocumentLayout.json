@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\JT\\Small_Projects\\TicTacToe\\",
+  "WorkspaceRootPath": "C:\\Users\\jtgul\\Small_Projects\\TicTacToe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{460E6343-2CED-4346-86FA-72162BBF7976}|TicTacToe\\TicTacToe.vcxproj|C:\\Users\\JT\\Small_Projects\\TicTacToe\\TicTacToe\\TicTacToe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{460E6343-2CED-4346-86FA-72162BBF7976}|TicTacToe\\TicTacToe.vcxproj|C:\\Users\\jtgul\\Small_Projects\\TicTacToe\\TicTacToe\\TicTacToe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{460E6343-2CED-4346-86FA-72162BBF7976}|TicTacToe\\TicTacToe.vcxproj|solutionrelative:TicTacToe\\TicTacToe.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TicTacToe.cpp",
-              "DocumentMoniker": "C:\\Users\\JT\\Small_Projects\\TicTacToe\\TicTacToe\\TicTacToe.cpp",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\TicTacToe\\TicTacToe\\TicTacToe.cpp",
               "RelativeDocumentMoniker": "TicTacToe\\TicTacToe.cpp",
-              "ToolTip": "C:\\Users\\JT\\Small_Projects\\TicTacToe\\TicTacToe\\TicTacToe.cpp",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\TicTacToe\\TicTacToe\\TicTacToe.cpp",
               "RelativeToolTip": "TicTacToe\\TicTacToe.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-06T16:37:15.902Z",
               "EditorCaption": ""
