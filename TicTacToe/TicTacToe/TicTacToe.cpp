@@ -154,8 +154,26 @@ void Play2() {
 
 void AiMove(vector<string>& board) {
 	//check if AI and win in 1 move
-	
+	if ((board[0] == "O" && board[1] == "O") || (board[5] == "O" && board[8] == "O") || (board[4] == "O" && board[6] == "O")) { Play(board, "3", 2); return; };//top right
+	if ((board[0] == "O" && board[2] == "O") || (board[4] == "O" && board[7] == "O")) { Play(board, "2", 2); return; };//top middle
+	if ((board[2] == "O" && board[1] == "O") || (board[3] == "O" && board[6] == "O") || (board[4] == "O" && board[8] == "O")) { Play(board, "1", 2); return; };//top left
+	if ((board[3] == "O" && board[4] == "O") || (board[2] == "O" && board[8] == "O")) { Play(board, "6", 2); return; };//middle right
+	if ((board[3] == "O" && board[5] == "O") || (board[1] == "O" && board[7] == "O") || (board[0] == "O" && board[8] == "O") || (board[2] == "O" && board[6] == "O")) { Play(board, "5", 2); return; };//middle middle
+	if ((board[4] == "O" && board[5] == "O") || (board[0] == "O" && board[6] == "O")) { Play(board, "4", 2); return; };//middle left
+	if ((board[6] == "O" && board[7] == "O") || (board[2] == "O" && board[5] == "O") || (board[0] == "O" && board[4] == "O")) { Play(board, "9", 2); return; };//bottom right
+	if ((board[6] == "O" && board[8] == "O") || (board[4] == "O" && board[1] == "O")) { Play(board, "8", 2); return; };//bottom middle
+	if ((board[7] == "O" && board[8] == "O") || (board[0] == "O" && board[4] == "O") || (board[2] == "O" && board[4] == "O")) { Play(board, "7", 2); return; };//bottom left
+
 	//check if the player can win in 1 move if so then block them
+	if ((board[0] == "X" && board[1] == "X") || (board[5] == "X" && board[8] == "X") || (board[4] == "X" && board[6] == "X")) { Play(board, "3", 2); return; };//top right
+	if ((board[0] == "X" && board[2] == "X") || (board[4] == "X" && board[7] == "X")) { Play(board, "2", 2); return; };//top middle
+	if ((board[2] == "X" && board[1] == "X") || (board[3] == "X" && board[6] == "X") || (board[4] == "X" && board[8] == "X")) { Play(board, "1", 2); return; };//top left
+	if ((board[3] == "X" && board[4] == "X") || (board[2] == "X" && board[8] == "X")) { Play(board, "6", 2); return; };//middle right
+	if ((board[3] == "X" && board[5] == "X") || (board[1] == "X" && board[7] == "X") || (board[0] == "X" && board[8] == "X") || (board[2] == "X" && board[6] == "X")) { Play(board, "5", 2); return; };//middle middle
+	if ((board[4] == "X" && board[5] == "X") || (board[0] == "X" && board[6] == "X")) { Play(board, "4", 2); return; };//middle left
+	if ((board[6] == "X" && board[7] == "X") || (board[2] == "X" && board[5] == "X") || (board[0] == "X" && board[4] == "X")) { Play(board, "9", 2); return; };//bottom right
+	if ((board[6] == "X" && board[8] == "X") || (board[4] == "X" && board[1] == "X")) { Play(board, "8", 2); return; };//bottom middle
+	if ((board[7] == "X" && board[8] == "X") || (board[0] == "X" && board[3] == "X") || (board[2] == "X" && board[4] == "X")) { Play(board, "7", 2); return; };//bottom left
 
 	//if neither player can win take the center
 	if (board[4] == "_") { // middle
@@ -163,19 +181,19 @@ void AiMove(vector<string>& board) {
 		return;
 	}
 	//otherwise take a corner space
-	else if (board[0] == "_") { // top left
+	if (board[0] == "_") { // top left
 		Play(board, "1", 2);
 		return;
 	}
-	else if (board[2] == "_") { // top right
+	if (board[2] == "_") { // top right
 		Play(board, "3", 2);
 		return;
 	}
-	else if (board[6] == "_") { // bottom left
+	if (board[6] == "_") { // bottom left
 		Play(board, "7", 2);
 		return;
 	}
-	else if (board[8] == "_") {// bottom right
+	if (board[8] == "_") {// bottom right
 		Play(board, "9", 2);
 		return;
 	}
@@ -186,11 +204,11 @@ void AiMove(vector<string>& board) {
 		Play(board, "2", 2);
 		return;
 	}
-	else if (board[3] == "_") { // left mid
+	if (board[3] == "_") { // left mid
 		Play(board, "4", 2);
 		return;
 	}
-	else if (board[5] == "_") { // right mid
+	if (board[5] == "_") { // right mid
 		Play(board, "5", 2);
 		return;
 	}
