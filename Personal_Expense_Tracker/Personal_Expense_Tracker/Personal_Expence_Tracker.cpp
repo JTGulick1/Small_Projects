@@ -41,7 +41,7 @@ public:
 };
 
 
-void Tranfer(Accounts acc1, Accounts acc2, int amount) { // WIP
+void Tranfer(Accounts& acc1, Accounts& acc2, int amount) {
 	acc1.expence(amount);
 	acc2.AddFunds(amount);
 }
@@ -91,15 +91,7 @@ int main() {
 			cin >> choice2;
 			cout << "Amount " << endl;
 			cin >> amount;
-			try
-			{
-				Tranfer(dataBase[stoi(choice)], dataBase[stoi(choice2)], stoi(amount));
-			}
-			catch (const std::exception&)
-			{
-				system("cls");
-				cout << "Error with Transfer, Please check accounts and try agian...";
-			}
+			Tranfer(dataBase[stoi(choice) - 1], dataBase[stoi(choice2) - 1], stoi(amount));
 		}
 		else if (choice == to_string(dataBase.size() + 3)) {
 			return -1;
@@ -139,7 +131,7 @@ int main() {
 
 				system("cls");
 			}
-			
+
 		}
 		else {
 			system("cls");
