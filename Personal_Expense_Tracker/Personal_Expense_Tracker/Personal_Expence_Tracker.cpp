@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 
 
 using namespace std;
@@ -49,13 +50,55 @@ void Tranfer(Accounts& acc1, Accounts& acc2, int amount) {
 
 vector<Accounts> OpenAccounts() { //when the application opens find the text files and create the accounts
 	vector<Accounts> accounts;
-
-
+	std::string line = "";
+	for (int i = 1; i < 7; i++) {
+		std::ifstream file(to_string(i) + ".txt");
+		string name = "";
+		int bal = 0;
+		std::getline(file, line);
+		if (line != "") {
+			name = line;
+		}
+		std::getline(file, line);
+		if (line != "") {
+			bal = stoi(line);
+		}
+		Accounts acc = Accounts(name, i);
+		acc.total = bal;
+		while (std::getline(file, line)) {
+			acc.history.push_back(line);
+		}
+		file.close();
+		if (acc.name != "") {
+			accounts.push_back(acc);
+		}
+	}
+		
 	return accounts;
 }
 
-void SaveAccounts(vector<Accounts> accounts) { //when the application closes save the new information to the txt files
+void SaveAccounts(std::vector<Accounts>& accounts) {
+	for (int i = 1; i < 7; i++) {
+		if (accounts.size() < i) {
+			std::cerr << "Skipping file " << i << ".txt: Not enough accounts.\n";
+			continue;
+		}
 
+		std::ofstream file(std::to_string(i) + ".txt");
+		if (!file) {
+			std::cerr << "Error opening file: " << i << ".txt\n";
+			continue;
+		}
+
+		file << accounts[i - 1].name << "\n";   // Save account name
+		file << accounts[i - 1].total << "\n"; // Save balance
+
+		for (const std::string& entry : accounts[i - 1].history) {
+			file << entry << "\n"; // Save history
+		}
+
+		file.close();
+	}
 }
 
 
@@ -70,13 +113,13 @@ int main() {
 		for (int i = 0; i < dataBase.size(); i++) {
 			cout << "(" << i + 1 << ") " << dataBase[i].name << endl;
 		}
-		cout << "(" << dataBase.size() + 1 << ")" << " Create New Account" << endl;
+		cout << "(" << dataBase.size() + 1 << ")" << " Create New Account (Max 6 Accounts)" << endl;
 		cout << "(" << dataBase.size() + 2 << ")" << " Tranfer Amount" << endl;
 		cout << "(" << dataBase.size() + 3 << ")" << " Exit Application" << endl;
 		cin >> choice;
 
 
-		if (choice == to_string(dataBase.size() + 1)) {
+		if (choice == to_string(dataBase.size() + 1) && dataBase.size() < 6) {
 			cout << "Name of the new account" << endl;
 			std::cin.ignore();
 			std::getline(cin, choice);
@@ -94,7 +137,7 @@ int main() {
 			Tranfer(dataBase[stoi(choice) - 1], dataBase[stoi(choice2) - 1], stoi(amount));
 		}
 		else if (choice == to_string(dataBase.size() + 3)) {
-			return -1;
+			break;
 		}
 		else if (stoi(choice) < dataBase.size() + 1 && stoi(choice) > -1) {
 			system("cls");

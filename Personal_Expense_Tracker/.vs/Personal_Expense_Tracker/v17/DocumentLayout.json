@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\2.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|solutionrelative:Personal_Expense_Tracker\\2.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\Personal_Expence_Tracker.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|solutionrelative:Personal_Expense_Tracker\\Personal_Expence_Tracker.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|solutionrelative:Personal_Expense_Tracker\\1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\6.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|solutionrelative:Personal_Expense_Tracker\\6.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\5.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|solutionrelative:Personal_Expense_Tracker\\5.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\4.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|solutionrelative:Personal_Expense_Tracker\\4.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\3.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9E2E10A2-BCBF-4954-8C2C-E4D03CD2FAB4}|Personal_Expense_Tracker\\Personal_Expense_Tracker.vcxproj|solutionrelative:Personal_Expense_Tracker\\3.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +38,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "6.txt",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\6.txt",
+              "RelativeDocumentMoniker": "Personal_Expense_Tracker\\6.txt",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\6.txt",
+              "RelativeToolTip": "Personal_Expense_Tracker\\6.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-18T19:18:56.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "5.txt",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\5.txt",
+              "RelativeDocumentMoniker": "Personal_Expense_Tracker\\5.txt",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\5.txt",
+              "RelativeToolTip": "Personal_Expense_Tracker\\5.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-18T19:18:48.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "4.txt",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\4.txt",
+              "RelativeDocumentMoniker": "Personal_Expense_Tracker\\4.txt",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\4.txt",
+              "RelativeToolTip": "Personal_Expense_Tracker\\4.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-18T19:18:41.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "3.txt",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\3.txt",
+              "RelativeDocumentMoniker": "Personal_Expense_Tracker\\3.txt",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\3.txt",
+              "RelativeToolTip": "Personal_Expense_Tracker\\3.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-18T19:18:33.796Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "2.txt",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\2.txt",
+              "RelativeDocumentMoniker": "Personal_Expense_Tracker\\2.txt",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\2.txt",
+              "RelativeToolTip": "Personal_Expense_Tracker\\2.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-18T19:18:23.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "1.txt",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\1.txt",
+              "RelativeDocumentMoniker": "Personal_Expense_Tracker\\1.txt",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\1.txt",
+              "RelativeToolTip": "Personal_Expense_Tracker\\1.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-18T19:18:05.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Personal_Expence_Tracker.cpp",
               "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\Personal_Expence_Tracker.cpp",
               "RelativeDocumentMoniker": "Personal_Expense_Tracker\\Personal_Expence_Tracker.cpp",
               "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Personal_Expense_Tracker\\Personal_Expense_Tracker\\Personal_Expence_Tracker.cpp",
               "RelativeToolTip": "Personal_Expense_Tracker\\Personal_Expence_Tracker.cpp",
-              "ViewState": "AQIAAB4AAAAA6v0KkaABwDQAAAAAAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-13T00:11:07.791Z",
               "EditorCaption": ""
