@@ -2,35 +2,54 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <unordered_map>
 
 using namespace std;
 
 struct item {
 public:
 	enum Use {
-		Food,
-		Hydration,
-		Supplies,
-		Tool,
-		Weapon
+		Food, // 5
+		Hydration, // 3
+		Supplies, // 3
+		Tool, // 5
+		Weapon // 5
 	};
 	Use use;
+	string name = "";
 	int value = 0;
 
-	item(Use u, int val) {
-		value = val;
-		use = u;
+	explicit item(const string& u, int val, const string& n)
+		: value(val), name(n), use(Use::Supplies) { // Default to Supplies
+
+		static const unordered_map<string, Use> useMap = {
+			{"Food", Use::Food},
+			{"Hydration", Use::Hydration},
+			{"Supplies", Use::Supplies},
+			{"Tool", Use::Tool},
+			{"Weapon", Use::Weapon}
+		};
+
+		auto it = useMap.find(u);
+		if (it != useMap.end()) {
+			use = it->second;
+		}
+		else {
+			cerr << "Warning: Invalid use type '" << u << "', defaulting to Supplies." << endl;
+		}
 	}
 };
 
-
-struct Enemy {
+ 
+struct Enemy { // 10
 public:
+	string name = "";
 	int health = 0;
 	int damage = 0;
-	Enemy(int h, int d) {
+	Enemy(string n,int h, int d) {
 		health = h;
 		damage = d;
+		name = n;
 	}
 };
 
@@ -41,11 +60,42 @@ int main() {
 	int health = 100;
 	int attack = 5;
 	int money = 0;
+	int hunger = 100;
+	int water = 100;
 	int day = 0;
 	vector<item>  inv;
+	vector<item> list;
 	vector<Enemy> horde;
 	string input = "";
 	//Upload all Items from txt file
+	ifstream file("Items.txt");
+	for (int i = 0; i < 20; i++) {
+		string use = "";
+		string name = "";
+		string value = "";
+		std::getline(file, use);
+		std::getline(file, name);
+		std::getline(file, value);
+		item  it = item(use, stoi(value), name);
+		list.push_back(it);
+	}
+
+	file.close();
+
+	ifstream enms("Enemy.txt");
+	for (int i = 0; i < 9; i++) {
+		string name = "";
+		string health = "";
+		string damage = "";
+		std::getline(enms, name);
+		std::getline(enms, health);
+		std::getline(enms, damage);
+		Enemy  enemy = Enemy(name, stoi(health), stoi(damage));
+		horde.push_back(enemy);
+	}
+
+	enms.close();
+
 	
 
 	//Upload all Enemies from txt file
@@ -55,7 +105,7 @@ int main() {
 	cout << "(1) Start Game\n(2) Exit Game" << endl;
 	cin >> input;
 	if (input == "2") {
-		return;
+		return -1;
 	}
 	
 	system("cls");

@@ -1,0 +1,30 @@
+Bug
+5
+10
+Zombie
+50
+20
+Skeleton
+35
+20
+Slime
+1
+5
+Thug
+50
+25
+Mutant
+40
+15
+Demon
+75
+35
+Devil
+100
+50
+Undead Trader
+30
+10
+Angry Trader
+100
+75

@@ -1,0 +1,63 @@
+Food
+Caned Food
+20
+Food
+Rations
+25
+Food
+Potato
+5
+Food
+Fresh Cooked Meal
+50
+Food
+Snack
+10
+Hydration
+Bottled Water
+25
+Hydration
+Galon Water
+50
+Hydration
+Dirty Water
+10
+Supplies
+Small Pack
+25
+Supplies
+Medium Pack
+50
+Supplies
+Large Pack
+75
+Tool
+Key
+0
+Tool
+Bunker Key
+0
+Tool
+Wooden Key
+0
+Tool
+Shovel
+0
+Tool
+Decoy
+0
+Weapon
+Baseball Bat
+10
+Weapon
+Axe
+15
+Weapon
+Handgun
+20
+Weapon
+Katana
+20
+Weapon
+Assult Rifle
+25

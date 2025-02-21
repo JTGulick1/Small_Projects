@@ -129,6 +129,10 @@
   <ItemGroup>
     <ClCompile Include="Adventure_Text_Game.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Enemy.txt" />
+    <Text Include="Items.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
