@@ -63,6 +63,7 @@ int main() {
 	int hunger = 100;
 	int water = 100;
 	int day = 0;
+	int time = 1;
 	vector<item>  inv;
 	vector<item> list;
 	vector<Enemy> horde;
@@ -130,12 +131,20 @@ int main() {
 		system("cls");
 
 		//Day Phase
-		cout << "Begining of Day " << day << endl;
-		cout << "Traveling..." << endl;
+		while (time != 4) {
+			cout << "Day: " << day << " Time: " << time << endl;
+			cout << "Traveling..." << endl;
+		}
 
 
 		//Night Phase
+		while (true) {
+			cout << "Night and Camping Menu" << endl;
+			cout << "(1) Consume Something In Inventory\n(2) Open Shop\n(3) Continue To Next Day";
+			cin >> input;
 
+		}
+		
 
 	}
 	
