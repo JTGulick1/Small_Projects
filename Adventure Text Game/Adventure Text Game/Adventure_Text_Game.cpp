@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <unordered_map>
+#include <cstdlib>
 
 using namespace std;
 
@@ -134,17 +135,49 @@ int main() {
 		while (time != 4) {
 			cout << "Day: " << day << " Time: " << time << endl;
 			cout << "Traveling..." << endl;
-		}
+			int random = rand();
 
+			if (random % 4 == 0) {
+				cout << "Ran into a Trader..." << endl;
+				//Open trading menu
+			}
+			else if (random % 3 == 0) {
+				cout << "Ran Into A Enemy Horde" << endl;
+				//Open  Fight Gameplay
+			}
+			else if (random % 2 == 0 && random % 10 == 0) {
+				cout << "Stepped In A Trap (-10 HP)" << endl;
+			}
+			else {
+				cout << "Nothing Happened..." << endl;
+			}
+
+			cin >> input;
+
+			system("cls");
+			time++;
+		}
+		time = 0;
 
 		//Night Phase
 		while (true) {
 			cout << "Night and Camping Menu" << endl;
-			cout << "(1) Consume Something In Inventory\n(2) Open Shop\n(3) Continue To Next Day";
+			cout << "(1) Consume Something In Inventory\n(2) Open Shop\n(3) Continue To Next Day\n";
 			cin >> input;
-
+			if (input == "1") {
+				//Open Inv
+			}
+			else if (input == "2") {
+				//Open Night Trader
+				//Chance to Spawn Mobs
+			}
+			else if (input == "3") {
+				break;
+			}
+			system("cls");
 		}
 		
+		day++;
 
 	}
 	
