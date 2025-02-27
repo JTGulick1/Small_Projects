@@ -101,8 +101,6 @@ int main() {
 	int health = 100;
 	int attack = 5;
 	int money = 0;
-	int hunger = 100;
-	int water = 100;
 	int day = 0;
 	int time = 1;
 	int traderRep = 5;
@@ -184,7 +182,7 @@ int main() {
 				cout << "Ran into a Trader...    Trader Reputation: " << traderRep << endl;
 				//Open trading menu
 				random = std::rand() % list.size();
-				cout << "I am currently selling " << list[random].name << " for " << list[random].value << " are you interested?" << endl;
+				cout << "I am currently selling " << list[random].name << " for " << list[random].value - traderRep << " are you interested?" << endl;
 				cout << "(1) Yes\n(2) No\n";
 				cin >> input;
 				if (input == "1") {
@@ -248,11 +246,55 @@ int main() {
 			cout << "(1) Consume Something In Inventory\n(2) Open Shop\n(3) Continue To Next Day\n";
 			cin >> input;
 			if (input == "1") {
-				//Open Inv
+				cout << "Opening Inventory: (Please select an item to consume)" << endl;
+				for (int i = 0; i < inv.size(); i++) {
+					cout << i + 1 << " " << inv[i].name << endl;
+				}
+				cin >> input;
+				//WIP
+				health += inv[stoi(input) - 1].value;
+				inv.erase(inv.begin() + (stoi(input) - 1));
 			}
 			else if (input == "2") {
+				int random = std::rand() % 5;
 				//Open Night Trader
+				if (random <= 4) {
+					random = std::rand() % list.size();
+					cout << "I am currently selling " << list[random].name << " for " << list[random].value - traderRep << " are you interested?" << endl;
+					cout << "(1) Yes\n(2) No\n";
+					cin >> input;
+					if (input == "1") {
+						if (money >= list[random].value) {
+							cout << "Pleasure Doing Buisness" << endl;
+							money -= list[random].value;
+							inv.push_back(list[random]);
+							traderRep++;
+						}
+						else {
+							cout << "Not Enough Money" << endl;
+							traderRep--;
+						}
+					}
+					else {
+						cout << "Well get out of my face then..." << endl;
+						traderRep--;
+					}
+				}
+				
 				//Chance to Spawn Mobs
+				else {
+					cout << "Ran Into A Enemy Horde, While looking for the trader..." << endl;
+					cin >> input;
+					//Open  Fight Gameplay
+					random = std::rand() % horde.size();
+					bool batt = false;
+					batt = Battle(random, horde, health, attack);
+					if (batt == true) {
+						cout << "Congrats you win: Money + " << horde[random].damage + horde[random].health << endl;
+						money += horde[random].damage;
+						money += horde[random].health;
+					}
+				}
 			}
 			else if (input == "3") {
 				break;
