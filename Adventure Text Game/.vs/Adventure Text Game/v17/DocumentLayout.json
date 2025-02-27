@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "Adventure Text Game\\Enemy.txt",
               "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Adventure Text Game\\Adventure Text Game\\Enemy.txt",
               "RelativeToolTip": "Adventure Text Game\\Enemy.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-02-20T23:23:32.186Z"
+              "WhenOpened": "2025-02-20T23:23:32.186Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,9 +45,10 @@
               "RelativeDocumentMoniker": "Adventure Text Game\\Items.txt",
               "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Adventure Text Game\\Adventure Text Game\\Items.txt",
               "RelativeToolTip": "Adventure Text Game\\Items.txt",
-              "ViewState": "AQIAAAwAAAAAAAAAAADwvz4AAAACAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAABEAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-02-20T23:10:02.384Z"
+              "WhenOpened": "2025-02-20T23:10:02.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,7 +58,7 @@
               "RelativeDocumentMoniker": "Adventure Text Game\\Adventure_Text_Game.cpp",
               "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Adventure Text Game\\Adventure Text Game\\Adventure_Text_Game.cpp",
               "RelativeToolTip": "Adventure Text Game\\Adventure_Text_Game.cpp",
-              "ViewState": "AQIAAIYAAAAAABDPGkYewKMAAAAsAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-18T20:31:57.948Z",
               "EditorCaption": ""

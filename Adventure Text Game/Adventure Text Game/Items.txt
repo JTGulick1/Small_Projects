@@ -33,19 +33,19 @@ Large Pack
 75
 Tool
 Key
-0
+45
 Tool
 Bunker Key
-0
+60
 Tool
 Wooden Key
-0
+20
 Tool
 Shovel
-0
+20
 Tool
 Decoy
-0
+75
 Weapon
 Baseball Bat
 10

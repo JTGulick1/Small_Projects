@@ -54,6 +54,46 @@ public:
 	}
 };
 
+bool Battle(int Hnumber, vector<Enemy> horde, int& health, int attack) {
+	system("cls");
+	int enemnyHP = horde[Hnumber].health;
+	string input = "";
+	while (enemnyHP > 0 && health > 0) {
+		cout << "Encountered a " << horde[Hnumber].name << endl;
+		cout << "Player Stats: HP: " << health << " Damage: " << attack << endl;
+		cout << "Enemy Stats: HP: " << enemnyHP << " Damage: " << horde[Hnumber].damage << endl;
+		cout << "(1) Attack\n(2) Defend\n(3) Retreat" << endl;
+		cin >> input;
+		if (input == "1") {
+			enemnyHP -= attack;
+			if (enemnyHP > 0) {
+				health -= horde[Hnumber].damage;
+			}
+		}
+		else if (input == "2") {
+			health -= horde[Hnumber].damage / 2;
+		}
+		else if (input == "3") {
+			int random = rand() % 5 + 1;
+			if (random == 3) {
+				cout << "Flee Successful" << endl;
+				return false;
+			}
+			else {
+				cout << "Flee Failed" << endl;
+			}
+		}
+
+
+		cin >> input;
+		system("cls");
+	}
+	if (enemnyHP <= 0) {
+		return true;
+	}
+	return false;
+}
+
 
 int main() {
 
@@ -65,6 +105,7 @@ int main() {
 	int water = 100;
 	int day = 0;
 	int time = 1;
+	int traderRep = 5;
 	vector<item>  inv;
 	vector<item> list;
 	vector<Enemy> horde;
@@ -115,16 +156,17 @@ int main() {
 	cout << "Choose 1 class" << endl;
 	cout << "(1) Rogue (Damage + 2)\n(2) Brawler (Health + 10 Damage + 1) \n(3) Thief (money + 10)\n(4) Tank (Health + 20)\n(5) Survivalist (No Effects)" << endl;
 	cin >> input;
-	switch (stoi(input))
-	{
-	case 1:
+	if (input == "1") {
 		attack += 2;
-	case 2:
+	}
+	else if (input == "2") {
 		health += 10;
 		attack += 1;
-	case 3:
+	}
+	else if (input == "3") {
 		money += 10;
-	case 4:
+	}
+	else if (input == "4") {
 		health += 20;
 	}
 
@@ -135,30 +177,71 @@ int main() {
 		while (time != 4) {
 			cout << "Day: " << day << " Time: " << time << endl;
 			cout << "Traveling..." << endl;
-			int random = rand();
+			cout << "HP: " << health << "      Money: " << money << endl;;
+			int random = std::rand() % 6 + 1;
 
-			if (random % 4 == 0) {
-				cout << "Ran into a Trader..." << endl;
+			if (random == 4) {
+				cout << "Ran into a Trader...    Trader Reputation: " << traderRep << endl;
 				//Open trading menu
+				random = std::rand() % list.size();
+				cout << "I am currently selling " << list[random].name << " for " << list[random].value << " are you interested?" << endl;
+				cout << "(1) Yes\n(2) No\n";
+				cin >> input;
+				if (input == "1") {
+					if (money >= list[random].value) {
+						cout << "Pleasure Doing Buisness" << endl;
+						money -= list[random].value;
+						inv.push_back(list[random]);
+						traderRep++;
+					}
+					else {
+						cout << "Not Enough Money" << endl;
+						traderRep--;
+					}
+				}
+				else {
+					cout << "Well get out of my face then..." << endl;
+					traderRep--;
+				}
 			}
-			else if (random % 3 == 0) {
-				cout << "Ran Into A Enemy Horde" << endl;
-				//Open  Fight Gameplay
+			else if (random == 3) {
+				int random = std::rand() % 15 + 1;
+				cout << "Found Some Money... + " << random << endl;
+				money += random;
 			}
-			else if (random % 2 == 0 && random % 10 == 0) {
+			else if (random == 6 || random == 5) {
+				random = std::rand() % list.size();
+				cout << "Found a " << list[random].name << endl;
+				inv.push_back(list[random]);
+			}
+			else if (random == 7 || random == 8) {
+				cout << "Nothing Happends..." << endl;
+			}
+			else if (random == 2) {
 				cout << "Stepped In A Trap (-10 HP)" << endl;
+				health -= 10;
 			}
 			else {
-				cout << "Nothing Happened..." << endl;
+				cout << "Ran Into A Enemy Horde" << endl;
+				//Open  Fight Gameplay
+				random = std::rand() % horde.size();
+				bool batt = false;
+				batt = Battle(random, horde, health, attack);
+				if (batt == true) {
+					cout << "Congrats you win: Money + " << horde[random].damage + horde[random].health << endl;
+					money += horde[random].damage;
+					money += horde[random].health;
+				}
 			}
 
 			cin >> input;
-
+			if (health <= 0) {
+				break;
+			}
 			system("cls");
 			time++;
 		}
 		time = 0;
-
 		//Night Phase
 		while (true) {
 			cout << "Night and Camping Menu" << endl;
