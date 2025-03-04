@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jtgul\\Small_Projects\\Project Weather App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3263D39-7638-406E-BE2F-15F2C9923169}|Project Weather App\\Project Weather App.vcxproj|C:\\Users\\jtgul\\Small_Projects\\Project Weather App\\Project Weather App\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D3263D39-7638-406E-BE2F-15F2C9923169}|Project Weather App\\Project Weather App.vcxproj|solutionrelative:Project Weather App\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\jtgul\\Small_Projects\\Project Weather App\\Project Weather App\\Main.cpp",
+              "RelativeDocumentMoniker": "Project Weather App\\Main.cpp",
+              "ToolTip": "C:\\Users\\jtgul\\Small_Projects\\Project Weather App\\Project Weather App\\Main.cpp",
+              "RelativeToolTip": "Project Weather App\\Main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-04T00:25:08.745Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
