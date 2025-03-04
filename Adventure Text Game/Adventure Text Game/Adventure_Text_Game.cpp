@@ -137,7 +137,7 @@ int main() {
 
 	enms.close();
 
-	
+
 
 	//Upload all Enemies from txt file
 
@@ -251,7 +251,6 @@ int main() {
 					cout << i + 1 << " " << inv[i].name << endl;
 				}
 				cin >> input;
-				//WIP
 				health += inv[stoi(input) - 1].value;
 				inv.erase(inv.begin() + (stoi(input) - 1));
 			}
